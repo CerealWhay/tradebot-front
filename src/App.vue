@@ -2,7 +2,9 @@
 
 <template>
   <div class="app">
-    <div class="container">test</div>
+    <RouterView v-slot="{ Component }">
+      <Component :is="Component" />
+    </RouterView>
   </div>
 </template>
 
