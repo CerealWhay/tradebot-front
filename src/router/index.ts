@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
-import AccountMain from "@/modules/account/pages/MainPage.vue";
-import Main from "@/modules/main/pages/MainPage.vue";
+import { AccountMain } from "@/modules/account";
+import { Main } from "@/modules/main";
 
 const routes = [
   {

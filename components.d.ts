@@ -8,8 +8,16 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('primevue/button')['default']
-    InputSwitch: typeof import('primevue/inputswitch')['default']
+    CustomTransition: (typeof import("./src/ui/CustomTransition/CustomTransition.vue"))["default"]
+    FadeTransition: (typeof import("./src/ui/CustomTransition/components/FadeTransition/FadeTransition.vue"))["default"]
+    InputSwitch: (typeof import("primevue/inputswitch"))["default"]
+    MainHeader: typeof import('./src/components/MainHeader/MainHeader.vue')['default']
+    MainSidebar: typeof import('./src/components/MainSidebar/MainSidebar.vue')['default']
+    MobileSidebar: typeof import('./src/components/MobileSidebar/MobileSidebar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sidebar: typeof import('primevue/sidebar')['default']
+    SidebarContent: typeof import('./src/components/SidebarContent/SidebarContent.vue')['default']
+    SlideInTransition: (typeof import("./src/ui/CustomTransition/components/SlideInTransition/SlideInTransition.vue"))["default"]
   }
 }

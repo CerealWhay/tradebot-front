@@ -1,3 +1,18 @@
+@use "@/assets/styles/scss-vars" as vars;
+
 :root {
+  --screen-size-sm: #{vars.$sm};
+  --screen-size-md: #{vars.$md};
+  --screen-size-lg: #{vars.$lg};
+  --screen-size-xl: #{vars.$xl};
+  --screen-size-xxl: #{vars.$xxl};
+
   --body-scroll-gutter: auto;
+
+  --sidebar-width: 256px;
+  --layout-padding: 1.25rem;
+
+  --main-gap: 1.5rem;
+
+  --sidebar-z-index: 1;
 }

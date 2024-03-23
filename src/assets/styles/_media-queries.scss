@@ -1,35 +1,31 @@
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
+@use "@/assets/styles/scss-vars" as vars;
 
 @mixin sm-max {
-  @media (max-width: $sm) {
+  @media (max-width: vars.$sm) {
     @content;
   }
 }
 
 @mixin md-max {
-  @media (max-width: $md) {
+  @media (max-width: vars.$md) {
     @content;
   }
 }
 
 @mixin lg-max {
-  @media (max-width: $lg) {
+  @media (max-width: vars.$lg) {
     @content;
   }
 }
 
 @mixin xl-max {
-  @media (max-width: $xl) {
+  @media (max-width: vars.$xl) {
     @content;
   }
 }
 
 @mixin xxl-max {
-  @media (max-width: $xxl) {
+  @media (max-width: vars.$xxl) {
     @content;
   }
 }

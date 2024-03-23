@@ -1,10 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MainLayout from "@/layouts/MainLayout.vue";
+</script>
 
 <template>
   <div class="app">
-    <RouterView v-slot="{ Component }">
-      <Component :is="Component" />
-    </RouterView>
+    <MainLayout>
+      <RouterView v-slot="{ Component }">
+        <Component :is="Component" />
+      </RouterView>
+    </MainLayout>
   </div>
 </template>
 
