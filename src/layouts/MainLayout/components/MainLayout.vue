@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import MainSidebar from "@/components/MainSidebar";
-import MainHeader from "@/components/MainHeader";
-import MobileSidebar from "@/components/MobileSidebar";
+// components
+import MainSidebar from "./MainSidebar.vue";
+import MainHeader from "./MainHeader.vue";
+import MobileSidebar from "./MobileSidebar.vue";
+import UiWrapper from "@/ui/UiWrapper";
 </script>
 
 <template>
@@ -10,10 +12,10 @@ import MobileSidebar from "@/components/MobileSidebar";
       <MainSidebar />
     </div>
     <div class="main-layout__main">
-      <div class="main-layout__header">
+      <UiWrapper class="main-layout__header">
         <MainHeader />
-      </div>
-      <div class="main-layout__content"><slot /></div>
+      </UiWrapper>
+      <UiWrapper class="main-layout__content"><slot /></UiWrapper>
     </div>
   </div>
 
@@ -46,16 +48,11 @@ import MobileSidebar from "@/components/MobileSidebar";
   &__header {
     position: sticky;
     top: 0;
-    padding: var(--layout-padding);
 
     border-bottom-width: 1px;
     border-color: var(--surface-200);
 
     background: var(--primary-50);
-  }
-
-  &__content {
-    padding: var(--layout-padding);
   }
 
   @include media.xl-max {
@@ -71,7 +68,7 @@ import MobileSidebar from "@/components/MobileSidebar";
   }
 
   @include media.sm-max {
-    --layout-padding: 0.75rem;
+    --global-gap: 0.75rem;
   }
 }
 </style>

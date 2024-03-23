@@ -1,4 +1,4 @@
-import CustomTransition from "./CustomTransition.vue";
+import UiTransition from "./UiTransition.vue";
 import SlideInTransition from "./components/SlideInTransition";
 import FadeTransition from "./components/FadeTransition";
 import type { Component } from "vue";
@@ -16,4 +16,4 @@ export interface Props {
   direction?: DirectionType;
 }
 
-export default CustomTransition;
+export default UiTransition;

@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { Props } from "./index.ts";
 import { computed } from "vue";
 
+// types
+import { Props } from "./";
+
+// props
 const props = withDefaults(defineProps<Props>(), {
   direction: "top",
 });
 
+// computed
 const selectedDirection = computed<string>(() => {
   switch (props.direction) {
     case "top": {

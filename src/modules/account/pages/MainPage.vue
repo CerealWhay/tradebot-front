@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 
-// Store
+// store
 import { useAccountStore } from "@/modules/account/store";
 const accountStore = useAccountStore();
 
-// Methods
+// methods
 async function getWalletBalance() {
   await accountStore.getWalletBalance();
 }
 
+// hooks
 onMounted(() => {
   getWalletBalance();
 });

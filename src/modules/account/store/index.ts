@@ -1,13 +1,13 @@
 import { defineStore } from "pinia";
-import { ref } from "vue";
 import { AccountApi } from "@/modules/account/api";
+import { ref } from "vue";
 
 export const useAccountStore = defineStore("account", () => {
   const api = new AccountApi();
 
-  const walletBalance = ref();
+  const walletBalance = ref({});
 
-  async function getWalletBalance() {
+  async function getWalletBalance(): Promise<void> {
     walletBalance.value = await api.getWalletBalance();
   }
 
