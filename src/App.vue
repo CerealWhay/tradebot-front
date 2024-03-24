@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // components
 import { MainLayout } from "@/layouts/MainLayout";
+import Toast from "primevue/toast";
 </script>
 
 <template>
@@ -11,6 +12,8 @@ import { MainLayout } from "@/layouts/MainLayout";
       </RouterView>
     </MainLayout>
   </div>
+
+  <Toast />
 </template>
 
 <style lang="scss" scoped></style>

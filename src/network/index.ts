@@ -7,7 +7,7 @@ export class Http {
   baseUrl: string;
 
   constructor() {
-    this.baseUrl = import.meta.env.VITE_API_URL || "wer";
+    this.baseUrl = import.meta.env.VITE_API_URL || "";
     this.#axios = axios.create({
       timeout: 10000,
     });
