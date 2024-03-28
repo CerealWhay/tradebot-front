@@ -1,4 +1,4 @@
-@use "@/assets/styles/scss-vars" as vars;
+@use "./scss-vars" as vars;
 
 :root {
   --screen-size-sm: #{vars.$sm};

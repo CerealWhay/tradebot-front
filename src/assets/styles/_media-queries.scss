@@ -1,4 +1,4 @@
-@use "@/assets/styles/scss-vars" as vars;
+@use "./scss-vars" as vars;
 
 @mixin sm-max {
   @media (max-width: vars.$sm) {

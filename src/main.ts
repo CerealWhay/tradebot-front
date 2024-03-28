@@ -1,8 +1,11 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import PrimeVue from "primevue/config";
 import { createPinia } from "pinia";
 import { router } from "@/router";
+import i18n from "@/locales";
+
+// primevue
+import PrimeVue from "primevue/config";
 import ToastService from "primevue/toastservice";
 
 // styling
@@ -16,4 +19,5 @@ app.use(PrimeVue);
 app.use(ToastService);
 app.use(createPinia());
 app.use(router);
+app.use(i18n);
 app.mount("#app");

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onMounted, onBeforeUnmount } from "vue";
 
 // store
-import { useAccountStore } from "@/modules/account/store";
+import { useAccountStore } from "../store";
 const accountStore = useAccountStore();
 
 // methods
@@ -13,6 +13,10 @@ async function getWalletBalance() {
 // hooks
 onMounted(() => {
   getWalletBalance();
+});
+
+onBeforeUnmount(() => {
+  accountStore.reset();
 });
 </script>
 

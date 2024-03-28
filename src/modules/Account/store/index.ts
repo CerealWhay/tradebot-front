@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { AccountApi } from "@/modules/account/api";
+import { AccountApi } from "../api";
 import { ref } from "vue";
 import { useToastStore } from "@/store/toast";
 
@@ -17,8 +17,13 @@ export const useAccountStore = defineStore("account", () => {
     }
   }
 
+  function reset(): void {
+    walletBalance.value = {};
+  }
+
   return {
     walletBalance,
     getWalletBalance,
+    reset,
   };
 });

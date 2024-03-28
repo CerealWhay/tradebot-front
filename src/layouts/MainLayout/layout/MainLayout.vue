@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // components
-import MainSidebar from "./MainSidebar.vue";
-import MainHeader from "./MainHeader.vue";
-import MobileSidebar from "./MobileSidebar.vue";
+import MainSidebar from "../components/MainSidebar.vue";
+import MainHeader from "../components/MainHeader.vue";
+import MobileSidebar from "../components/MobileSidebar.vue";
 import UiWrapper from "@/ui/UiWrapper";
 </script>
 

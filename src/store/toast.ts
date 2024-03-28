@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import { useToast } from "primevue/usetoast";
 import type { ToastType } from "@/types";
 import { AxiosError } from "axios";
-import { getAxiosErrorText } from "@/utils/helpers.ts";
+import { getAxiosErrorText } from "@/utils/helpers";
 
 export const useToastStore = defineStore("toast", () => {
   const toast = useToast();

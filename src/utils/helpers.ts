@@ -1,5 +1,9 @@
 import type { AxiosError } from "axios";
 
 export const getAxiosErrorText = (e: AxiosError): string => {
-  return e.response?.statusText ?? "Please try later";
+  return (
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    e.response?.data?.message ?? e.response?.statusText ?? "Please try later"
+  );
 };

@@ -1,16 +1,16 @@
 <script setup lang="ts">
 // components
-import { MainLayout } from "@/layouts/MainLayout";
 import Toast from "primevue/toast";
+import FinalLayout from "@/layouts/FinalLayout.vue";
 </script>
 
 <template>
   <div class="app">
-    <MainLayout>
+    <FinalLayout>
       <RouterView v-slot="{ Component }">
         <Component :is="Component" />
       </RouterView>
-    </MainLayout>
+    </FinalLayout>
   </div>
 
   <Toast />

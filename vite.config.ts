@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { fileURLToPath, URL } from "node:url";
+import { fileURLToPath, URL } from "url";
 import vue from "@vitejs/plugin-vue";
 import eslint from "vite-plugin-eslint";
 import Components from "unplugin-vue-components/vite";
@@ -22,4 +22,5 @@ export default defineConfig({
       },
     ],
   },
+  base: "./",
 });

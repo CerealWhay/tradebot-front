@@ -7,15 +7,15 @@ import UiWrapper from "@/ui/UiWrapper";
 import SidebarContent from "@/components/SidebarContent";
 
 // store
-import { useMainLayoutStore } from "@/layouts/MainLayout/store";
-const layoutStore = useMainLayoutStore();
+import { useScreenSizeStore } from "@/store/screenSize";
+const screenSizeStore = useScreenSizeStore();
 
 // data
 const isHover = ref<boolean>(false);
 
 // computed
 const isShowSidebar = computed<boolean>(() => {
-  if (!layoutStore.screenWidthController.isXL) {
+  if (!screenSizeStore.screenWidthController.isXL) {
     return true;
   } else {
     return Boolean(isHover.value);
@@ -30,7 +30,7 @@ const isShowSidebar = computed<boolean>(() => {
     @mouseleave="isHover = false"
   >
     <UiWrapper
-      v-if="layoutStore.screenWidthController.isXL"
+      v-if="screenSizeStore.screenWidthController.isXL"
       class="main-sidebar__plug main-sidebar__wrapper"
     >
       plug
@@ -43,7 +43,8 @@ const isShowSidebar = computed<boolean>(() => {
         v-if="isShowSidebar"
         class="main-sidebar__main main-sidebar__wrapper"
         :class="{
-          'main-sidebar__main--hidden': layoutStore.screenWidthController.isXL,
+          'main-sidebar__main--hidden':
+            screenSizeStore.screenWidthController.isXL,
         }"
       >
         <SidebarContent />
