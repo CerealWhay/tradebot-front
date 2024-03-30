@@ -5,21 +5,21 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 export {}
 
-declare module 'vue' {
+declare module "vue" {
   export interface GlobalComponents {
-    Button: typeof import('primevue/button')['default']
-    CustomTransition: (typeof import("./src/ui/UiTransition/CustomTransition.vue"))["default"]
-    FadeTransition: (typeof import("./src/ui/UiTransition/components/FadeTransition/FadeTransition.vue"))["default"]
-    InputSwitch: (typeof import("primevue/inputswitch"))["default"]
-    InputText: typeof import('primevue/inputtext')['default']
-    MainHeader: (typeof import("./src/layouts/MainLayout/components/MainHeader.vue"))["default"]
-    MainSidebar: (typeof import("./src/layouts/MainLayout/components/MainSidebar.vue"))["default"]
-    MobileSidebar: (typeof import("./src/layouts/MainLayout/components/MobileSidebar.vue"))["default"]
-    Password: typeof import('primevue/password')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
-    Sidebar: typeof import('primevue/sidebar')['default']
-    SidebarContent: typeof import('./src/components/SidebarContent/SidebarContent.vue')['default']
-    SlideInTransition: (typeof import("./src/ui/UiTransition/components/SlideInTransition/SlideInTransition.vue"))["default"]
+    Button: (typeof import("primevue/button"))["default"];
+    CustomTransition: (typeof import("./src/ui/UiTransition/CustomTransition.vue"))["default"];
+    FadeTransition: (typeof import("./src/ui/UiTransition/components/FadeTransition/FadeTransition.vue"))["default"];
+    InputSwitch: (typeof import("primevue/inputswitch"))["default"];
+    InputText: (typeof import("primevue/inputtext"))["default"];
+    MainHeader: (typeof import("./src/layouts/MainLayout/components/MainHeader.vue"))["default"];
+    MainSidebar: (typeof import("./src/layouts/MainLayout/components/MainSidebar.vue"))["default"];
+    MobileSidebar: (typeof import("./src/layouts/MainLayout/components/MobileSidebar.vue"))["default"];
+    Password: (typeof import("primevue/password"))["default"];
+    RouterLink: (typeof import("vue-router"))["RouterLink"];
+    RouterView: (typeof import("vue-router"))["RouterView"];
+    Sidebar: (typeof import("primevue/sidebar"))["default"];
+    SidebarContent: (typeof import("./src/components/SidebarContent.vue"))["default"];
+    SlideInTransition: (typeof import("./src/ui/UiTransition/components/SlideInTransition/SlideInTransition.vue"))["default"];
   }
 }

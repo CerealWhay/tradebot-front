@@ -4,7 +4,7 @@ import { computed, ref } from "vue";
 // components
 import UiTransition from "@/ui/UiTransition";
 import UiWrapper from "@/ui/UiWrapper";
-import SidebarContent from "@/components/SidebarContent";
+import SidebarContent from "@/components/SidebarContent.vue";
 
 // store
 import { useScreenSizeStore } from "@/store/screenSize";

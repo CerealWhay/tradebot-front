@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // components
-import SidebarContent from "@/components/SidebarContent";
+import SidebarContent from "@/components/SidebarContent.vue";
 import UiWrapper from "@/ui/UiWrapper";
 
 // store
